@@ -6,33 +6,99 @@ body {
     width: 1000px;
     margin: 0 auto;
     font-size: 24px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(121, 75, 105);
 }
 </style>
 </head>
 <body>
     <style>
-textarea.message {
-    border-radius: 10px;
-    width: 400px;
-
+textarea {
+    border-radius: 5px;
+    width: 200px;
+    box-shadow: 1px 1px 2px 1px #000000;
 }
+</style>
 
+<style>
+    textarea:hover {
+        border-radius: 5px;
+        width: 220px;
+        height: 220px;
+        box-shadow: 1px 1px 2px 1px #000000;
+        transform: translate(0px, -6px);
+        transition: .5s ease;
+    }
+    </style>
+<style>
+    input {
+        border-radius: 5px;
+        border-color: #ccc;
+        width: 200px;
+        box-shadow: 1px 1px 2px 1px #000000;
+        transition: .4s ease;
+    }
     </style>
 
-<!--logo -->
+<style>
+    input:hover {
+        border-radius: 5px;
+        border-color: #ccc;
+        width: 220px;
+        height: 30px;
+        transform: translate(0px, 6px);
+        box-shadow: 1px 1px 2px 1px #000000;
+    }
+    </style>
+
+<style>
+    button {
+        border-radius: 5px;
+        border-color: #ccc;
+        background-color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+        width: 160px;
+        height: 30px;
+        box-shadow: 2px 2px 3px 1px #000000;
+        transition: .5s ease;
+    }
+    </style>
+
+<style>
+button:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    cursor: grab;
+    width: 180px;
+    height: 40px;
+}
+
+</style>
+<style>
+    img {
+width: 300px;
+height: 300px;
+transition: .5s ease;
+    }
+    </style>
+    <style>
+        img:hover {
+    width: 400px;
+    height: 400px;
+    transform: rotate(360deg);
+        }
+        </style>
+
 <center>
-        <img src="https://i.imgur.com/dZGqV1v.png" alt="CGMatter" width="300" height="300">
+        <img src="https://i.imgur.com/dZGqV1v.png" alt="CGMatter"  con>
 </center>
 
 <center>
-    <b>Send me a m</b>
     <form target="_blank" action="https://formsubmit.co/647efe0b0bfc697415b298706078a7e4" method="POST">
     <input type="text" name="name" placeholder="Full Name" required><br>
     <input type="email" name="email" placeholder="Email Address" required><br>
     <div style="height: 12px;"></div>
-    <textarea class="message" name="message" placeholder="Your Message"  rows="6" required></textarea><br>
-    <button type="submit">Submit Form</button>
+    <textarea name="message" placeholder="Your Message"  rows="12" required></textarea><br>
+    <button type="submit" >Send me a message</button>
     </form>
 </center>
 
