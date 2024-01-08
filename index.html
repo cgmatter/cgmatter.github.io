@@ -1,39 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
 <style>
-button{
-  background-color: rgb(0, 0, 0);
-  color: rgb(255, 255, 255);
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin-top: 10px;
-  height: 40px;
-  width: 100px;
-  border-radius: 10px;
-  cursor: grab;
-  transition: .25s;
-  font-weight: bold;
+body {
+    width: 1000px;
+    margin: 0 auto;
+    font-size: 24px;
+    background-color: rgb(255, 255, 255);
+}
 </style>
+</head>
+<body>
+    <style>
+textarea.message {
+    border-radius: 10px;
+    width: 400px;
 
-<style>
-button:hover{
-        background-color: rgba(0, 255, 85, 0.8);
-        color: rgb(0, 0, 0);
-        border: 2px solid rgb(0, 0, 0);
-    }
-</style>
+}
+
+    </style>
+
+<!--logo -->
+<center>
+        <img src="https://i.imgur.com/dZGqV1v.png" alt="CGMatter" width="300" height="300">
+</center>
+
+<center>
+    <b>Send me a message</b>
+    <form target="_blank" action="https://formsubmit.co/cgmatterofficial@gmail.com" method="POST">
+    <input type="text" name="name" placeholder="Full Name" required><br>
+    <input type="email" name="email" placeholder="Email Address" required><br>
+    <div style="height: 12px;"></div>
+    <textarea class="message" name="message" placeholder="Your Message"  rows="6" required></textarea><br>
+    <button type="submit">Submit Form</button>
+    </form>
+</center>
 
 
-<button>
-Click me
-</button>
-
-<h1>my header</h1>
 
 
-<center><button>anotha one</button></center>
 
-<li>one</li>
-<li>two</li>
-<li>three</li>
-    
+
+</body>
+</html>
