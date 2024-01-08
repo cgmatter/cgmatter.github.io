@@ -14,91 +14,185 @@ body {
     <style>
 textarea {
     border-radius: 5px;
-    width: 200px;
+    width: 300px;
     box-shadow: 1px 1px 2px 1px #000000;
+    filter: blur(5px);
+    transition: .5s ease;
 }
 </style>
 
 <style>
     textarea:hover {
-        border-radius: 5px;
-        width: 220px;
-        height: 220px;
+        border-radius: 0px;
+        width: 320px;
+        height: 200px;
         box-shadow: 1px 1px 2px 1px #000000;
-        transform: translate(0px, -6px);
-        transition: .5s ease;
+        transform: translate(0px, 6px) rotate(-2.5deg);
+
+        filter: blur(0px);
     }
     </style>
 <style>
     input {
         border-radius: 5px;
+        height: 25px;
         border-color: #ccc;
-        width: 200px;
+        width: 300px;
         box-shadow: 1px 1px 2px 1px #000000;
         transition: .4s ease;
+        filter: blur(5px);
     }
     </style>
 
 <style>
     input:hover {
-        border-radius: 5px;
+        border-radius: 0px;
         border-color: #ccc;
-        width: 220px;
-        height: 30px;
-        transform: translate(0px, 6px);
+        width: 320px;
+        height: 34px;
+        transform: translate(0px, 6px) rotate(2.5deg);
         box-shadow: 1px 1px 2px 1px #000000;
+        filter: blur(0px);
     }
     </style>
 
 <style>
-    button {
+    button.message {
         border-radius: 5px;
         border-color: #ccc;
         background-color: rgb(0, 0, 0);
         color: rgb(255, 255, 255);
-        width: 160px;
-        height: 30px;
+        width: 170px;
+        font-size: 15px;
+        font-weight: bold;
+        height: 75px;
+        transform: translate(70px, 15px);
         box-shadow: 2px 2px 3px 1px #000000;
+        filter: blur(5px);
         transition: .5s ease;
     }
     </style>
 
 <style>
-button:hover {
-    background-color: rgb(255, 255, 255);
+button.message:hover {
+        background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     cursor: grab;
-    width: 180px;
-    height: 40px;
+    font-size: 15px;
+    height: 85px;
+    transform: translate(70px, 25px) rotate(4deg);
+    filter: blur(0px);
 }
 
 </style>
+
 <style>
-    img {
-width: 300px;
-height: 300px;
+button.patreon:hover {
+    transform: translate(0px, 6px);
+    transform: scale(2)  translate(0px, 3px) rotate(-4deg);
+    cursor: grab;
+    filter: blur(0px);
+}
+</style>
+<style>
+    button.patreon {
+        border-radius: 5px;
+        border-color: #cccccc00;
+        background-color: #F55C0F;
+        box-shadow:1px 1px 3px 1px #000000;
+        width: 175px;
+        height: 55px;
+        filter: blur(20px);
+        transform: scale(1.75);
+  
+        transition: .5s ease;
+        animation: change 4s infinite;
+        
+    }
+
+    @keyframes change {
+        0% { filter: hue-rotate(0deg); }
+        50% { filter: hue-rotate(-45deg); }
+        100% { filter: hue-rotate(0deg); }
+    }
+    </style>
+</style>
+
+<style>
+    img.logo {
+width: 360px;
+height: 360px;
 transition: .5s ease;
+filter: blur(8px);
     }
     </style>
     <style>
-        img:hover {
-    width: 400px;
-    height: 400px;
-    transform: rotate(360deg);
+        img.logo:hover {
+            width: 420px;
+            height: 420px;
+            transform: rotate(10deg);
+            filter: blur(0px);
         }
+    </style>
+
+        <style>
+            img.patreon {
+                border-radius: 5px;
+                transform: translate(0px, 2px);
+                transition: .5s ease;
+            }
         </style>
 
+<style>
+    img.patreon:hover {
+        border-radius: 5px;
+        transform: translate(0px, 2px);
+    }
+</style>
+
+<style>
+    div.blurring {
+        filter: blur(8px);
+        transition: .5s ease;
+    }
+    </style>
+
+    <style>
+        div.blurring:hover {
+            filter: blur(0px);
+        }
+    </style>
+
+
 <center>
-        <img src="https://i.imgur.com/dZGqV1v.png" alt="CGMatter"  con>
+        <img class="logo" src="https://i.imgur.com/dZGqV1v.png" alt="CGMatter"  con>
 </center>
+
+<div style="width: 0px; height: 20px;"></div>
+<center>
+<div class="blurring" style="display: inline-block;">
+        <a href="https://www.patreon.com/cg_matter" target="_blank">
+            <button class="patreon" style="cursor: grab;">
+                <img class="patreon" src="https://i.imgur.com/DD24w5Z.png" alt="Patreon Link">
+            </button>
+        </a>
+</div>
+</center>
+</div>
+
+<div style="width: 0px; height: 50px;"></div>
+
 
 <center>
     <form target="_blank" action="https://formsubmit.co/647efe0b0bfc697415b298706078a7e4" method="POST">
     <input type="text" name="name" placeholder="Full Name" required><br>
+    <div style="height: 4px;"></div>
     <input type="email" name="email" placeholder="Email Address" required><br>
-    <div style="height: 12px;"></div>
+    <div style="height: 16px;"></div>
     <textarea name="message" placeholder="Your Message"  rows="12" required></textarea><br>
-    <button type="submit" >Send me a message</button>
+    <div style="height: 6px;"></div>
+    <div style="width: 0px; height: 10px;"></div>
+    <button type="submit" class="message">Send me a message</button>
     </form>
 </center>
 
